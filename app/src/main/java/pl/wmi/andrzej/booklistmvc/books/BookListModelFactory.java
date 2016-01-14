@@ -1,10 +1,7 @@
 package pl.wmi.andrzej.booklistmvc.books;
 
-import android.content.Context;
-
 import pl.wmi.andrzej.booklistmvc.list.ListModel;
-import pl.wmi.andrzej.booklistmvc.list.ListObserver;
-import pl.wmi.andrzej.booklistmvc.list.View;
+import pl.wmi.andrzej.booklistmvc.common.View;
 
 /**
  * Created by andrzej on 09.01.16.

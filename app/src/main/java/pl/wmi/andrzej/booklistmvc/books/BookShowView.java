@@ -10,8 +10,8 @@ import android.widget.Toast;
 
 import pl.wmi.andrzej.booklistmvc.R;
 import pl.wmi.andrzej.booklistmvc.list.ListObservable;
-import pl.wmi.andrzej.booklistmvc.list.ShowController;
-import pl.wmi.andrzej.booklistmvc.list.View;
+import pl.wmi.andrzej.booklistmvc.show.ShowController;
+import pl.wmi.andrzej.booklistmvc.common.View;
 
 public class BookShowView extends AppCompatActivity implements View<Book> {
 

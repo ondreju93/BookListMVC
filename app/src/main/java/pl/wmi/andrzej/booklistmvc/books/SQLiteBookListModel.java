@@ -13,7 +13,7 @@ import java.util.Objects;
 import pl.wmi.andrzej.booklistmvc.R;
 import pl.wmi.andrzej.booklistmvc.list.ListModel;
 import pl.wmi.andrzej.booklistmvc.list.ListObserver;
-import pl.wmi.andrzej.booklistmvc.list.View;
+import pl.wmi.andrzej.booklistmvc.common.View;
 
 /**
  * Created by andrzej on 07.01.16.
@@ -21,17 +21,13 @@ import pl.wmi.andrzej.booklistmvc.list.View;
 public class SQLiteBookListModel implements ListModel<Book> {
 
     private final SQLiteDatabase db;
-
     private final SQLiteOpenHelper databaseOpenHelper;
-
     private final List<ListObserver> observers = new ArrayList<>();
-
     private final Context context;
 
     SQLiteBookListModel(final View<Book> bookListView) {
         this.context = bookListView.getContext();
 
-//        context.deleteDatabase(DB_NAME);
         databaseOpenHelper = new SQLiteOpenHelper(context, context.getString(R.string.dbName), null, context.getResources().getInteger(R.integer.dbVersion)) {
             @Override
             public void onCreate(SQLiteDatabase sqLiteDatabase) {
@@ -49,15 +45,12 @@ public class SQLiteBookListModel implements ListModel<Book> {
         attach(bookListView);
     }
 
-
     @Override
     public Book getItem(Long id) {
         Cursor cursor = null;
         Book book = new Book();
         try {
             cursor = this.db.rawQuery(context.getString(R.string.selectBookById), new String[]{id + ""});
-//            cursor = this.db.rawQuery(
-//                    "SELECT id, title, author FROM " + SQLiteBookListModel.TABLE_NAME + " WHERE id=?", );
             if (cursor.getCount() > 0) {
                 cursor.moveToFirst();
 
@@ -72,7 +65,6 @@ public class SQLiteBookListModel implements ListModel<Book> {
         }
         return book;
     }
-
 
     @Override
     public List<Book> getItems() {

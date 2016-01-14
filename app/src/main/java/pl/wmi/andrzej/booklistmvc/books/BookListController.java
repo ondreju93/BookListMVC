@@ -2,11 +2,9 @@ package pl.wmi.andrzej.booklistmvc.books;
 
 import java.util.Objects;
 
-import pl.wmi.andrzej.booklistmvc.R;
 import pl.wmi.andrzej.booklistmvc.list.ListController;
 import pl.wmi.andrzej.booklistmvc.list.ListModel;
-import pl.wmi.andrzej.booklistmvc.list.ListObserver;
-import pl.wmi.andrzej.booklistmvc.list.View;
+import pl.wmi.andrzej.booklistmvc.common.View;
 
 /**
  * Created by andrzej on 07.01.16.
@@ -35,7 +33,9 @@ public class BookListController implements ListController {
                 model.addItem(newBook);
             }
         } else {
-            view.showAlert(view.getContext().getString(R.string.emptyTitleError));
+            view.showAlert(EMPTY_TITLE_ERROR);
         }
     }
+
+    public static final String EMPTY_TITLE_ERROR = "Tytuł nie może być pusty!!!";
 }

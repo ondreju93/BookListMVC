@@ -13,7 +13,7 @@ import android.widget.Toast;
 import pl.wmi.andrzej.booklistmvc.R;
 import pl.wmi.andrzej.booklistmvc.list.ListController;
 import pl.wmi.andrzej.booklistmvc.list.ListObservable;
-import pl.wmi.andrzej.booklistmvc.list.View;
+import pl.wmi.andrzej.booklistmvc.common.View;
 
 public class BookListView extends AppCompatActivity implements View<Book> {
 

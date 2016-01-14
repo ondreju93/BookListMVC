@@ -1,8 +1,8 @@
 package pl.wmi.andrzej.booklistmvc.books;
 
 import pl.wmi.andrzej.booklistmvc.list.ListModel;
-import pl.wmi.andrzej.booklistmvc.list.ShowController;
-import pl.wmi.andrzej.booklistmvc.list.View;
+import pl.wmi.andrzej.booklistmvc.show.ShowController;
+import pl.wmi.andrzej.booklistmvc.common.View;
 
 /**
  * Created by andrzej on 09.01.16.

@@ -1,4 +1,4 @@
-package pl.wmi.andrzej.booklistmvc.list;
+package pl.wmi.andrzej.booklistmvc.show;
 
 /**
  * Created by andrzej on 09.01.16.
